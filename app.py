@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 from PIL import Image
 from google import genai 
 from supabase import create_client, Client
-# المكتبة الجديدة والموثوقة لإدارة الكوكيز
-from streamlit_extras.st_cookies import get_cookies
+# تم تصحيح الاستيراد: يجب أن يكون "cookies" بدلاً من "st_cookies"
+from streamlit_extras.cookies import get_cookies
 
 # -------------------- 1. الثوابت والإعداد الأولي --------------------
 
@@ -375,7 +375,6 @@ def main_app_ui():
                         update_user_usage(user_email, increment=True) 
                     
                     status.update(label="تم تحليل وحل المسألة بنجاح! 🎉", state="complete", expanded=False)
-                    # لا حاجة لـ st.rerun هنا، لأن التحديث تم بالفعل
                     
                 except Exception as e:
                     status.update(label="حدث خطأ!", state="error")
@@ -444,4 +443,3 @@ if __name__ == "__main__":
         
         with register_tab:
             register_form()
-
