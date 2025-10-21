@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 from PIL import Image
 from google import genai 
 from supabase import create_client, Client
-# تم تصحيح الاستيراد: يجب أن يكون "cookies" بدلاً من "st_cookies"
-from streamlit_extras.cookies import get_cookies
+# تم تصحيح الاستيراد للمرة الأخيرة ليناسب آخر تحديثات Streamlit Extras
+from streamlit_extras.cookie_manager import get_cookies
 
 # -------------------- 1. الثوابت والإعداد الأولي --------------------
 
