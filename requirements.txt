@@ -1,0 +1,8 @@
+streamlit
+google-genai
+supabase
+bcrypt
+pandas
+Pillow
+python-dotenv
+streamlit-extras
